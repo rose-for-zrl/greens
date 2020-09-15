@@ -6,6 +6,8 @@ const user = require('../../services/user.js');
 const app = getApp()
 Page({
     data: {
+        currentIndex: 0, //记录swiper 自定义面板指示器
+        //业务数据
         newGoods: [],
         hotGoods: [],
         topics: [],
@@ -61,7 +63,7 @@ Page({
         util.request(api.IndexUrlBanner).then(function (res) {
 
             if (res.errno === 0) {
-                data.banner = res.data.banner
+                data.banner = res.data.banner;
                 that.setData(data);
             }
         });
@@ -72,6 +74,12 @@ Page({
             }
         });
 
+    },
+    swiperChange: function(event) {
+        const index = event.detail.current;
+        this.setData({
+            currentIndex: index
+          })
     },
     onLoad: function (options) {
         this.getIndexData();
