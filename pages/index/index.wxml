@@ -12,4 +12,7 @@
       wx:for="{{ banner }}" 
       wx:for-index="index"> 0{{index + 1}} </view>
   </view>
+  <view class="bar">
+    sad 及
+  </view>
 </view>

@@ -8,6 +8,7 @@ Page({
     data: {
         currentIndex: 0, //记录swiper 自定义面板指示器
         //业务数据
+        title:"老邹家的蔬菜", //当前页面名称
         newGoods: [],
         hotGoods: [],
         topics: [],
@@ -82,6 +83,9 @@ Page({
           })
     },
     onLoad: function (options) {
+        wx.setNavigationBarTitle({
+            title: this.data.title
+          })
         this.getIndexData();
     },
     onReady: function () {

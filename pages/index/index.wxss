@@ -21,9 +21,31 @@
   font-weight:bold;
   color: beige;
   text-align: center; /** 水平居中 */
-  line-height: 120rpx; /** 垂直居中 */
-  padding-top: 3rpx red;
+  line-height: 120rpx; /** 垂直居中 同height */
+  border-top: gray 1rpx solid ;
 }
-.container .dots .item:last-child {
-  margin-right: 0;
+.container .dots .item.active {
+  background: rgba(255,255,255,0);
+  height: 120rpx;
+  width: 33.3%;
+  font-weight:bold;
+  color: beige;
+  text-align: center; /** 水平居中 */
+  line-height: 120rpx; /** 垂直居中 同height */
+  border-top: red 2rpx solid ;
+  animation: fade 0.5s ease;
+}
+@keyframes fade {
+  0% {
+    border-top: gray 1rpx solid ;
+  }
+  100% {
+    border-top: red 2rpx solid ;
+  }
+}
+.container .bar {
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+  display: flex;
 }
