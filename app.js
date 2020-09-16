@@ -34,6 +34,13 @@ App({
               content: '当前微信版本过低，无法更好体验程序，请升级到最新微信版本后重试。'
           })
       }
+
+      //获取设备顶部窗口的高度
+      wx.getSystemInfo({
+        success: (res) => {
+          this.globalData.deviceHeight = res.statusBarHeight
+        }
+      });
   },
   globalData: {
       userInfo: {
@@ -42,8 +49,7 @@ App({
           avatarUrl: 'https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/20180727/150547696d798c.png'
       },
       token: '',
-      userCoupon: 'NO_USE_COUPON',//默认不适用优惠券
-      courseCouponCode: {},//购买课程的时候优惠券信息
+      deviceHeight: 0 //设备顶部窗口的高度 不同设备窗口高度不一样，根据这个来设置自定义导航栏的高度
   },
   // 下拉刷新
   onPullDownRefresh: function () {

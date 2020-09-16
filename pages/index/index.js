@@ -7,6 +7,10 @@ const app = getApp()
 Page({
     data: {
         currentIndex: 0, //记录swiper 自定义面板指示器
+        nvabarData: {
+            showCapsule: 1, //是否显示左上角图标   1表示显示    0表示不显示
+            title: '我的主页', //导航栏 中间的标题
+          },
         //业务数据
         title:"老邹家的蔬菜", //当前页面名称
         newGoods: [],
@@ -83,9 +87,12 @@ Page({
           })
     },
     onLoad: function (options) {
+        //设置当前页面标题
         wx.setNavigationBarTitle({
             title: this.data.title
-          })
+          });
+        console.info(wx.getSystemInfoSync().windowHeight);
+        console.info(wx.getSystemInfoSync().windowWidth);
         this.getIndexData();
     },
     onReady: function () {

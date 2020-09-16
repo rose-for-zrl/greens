@@ -1,9 +1,16 @@
-
 /**app.wxss**/
+pages {
+  position: relative;
+  z-index: 9999998;
+  background: #fff;
+  height: 100%;
+}
+
 .container {
   box-sizing: border-box;
   background-color: #f4f4f4;
   font-family: PingFangSC-Light,helvetica,'Heiti SC';
+  height: 100%;
 } 
 
 view,image,text,navigator{

@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
   <swiper class="banner" bindchange="swiperChange" autoplay="true" interval="3000" duration="1000" >
     <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
       <navigator url="{{item.link}}">
@@ -11,8 +12,5 @@
     <view class="flex-item item {{ currentIndex == index? 'active' : '' }}" 
       wx:for="{{ banner }}" 
       wx:for-index="index"> 0{{index + 1}} </view>
-  </view>
-  <view class="bar">
-    sad 及
   </view>
 </view>

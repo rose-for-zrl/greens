@@ -1,0 +1,17 @@
+<!--component/navbar/index.wxml-->
+<view class='nav-wrap' style='height: {{deviceHeight*2 }}px;'>
+  <view class='nav-title' style='line-height: {{deviceHeight*2}}px;'>{{navbarData.title}}</view>
+
+  <view class='nav-capsule' wx:if='{{navbarData.showCapsule}}'>
+    <view class="icon inner-header-icon {{ clickInnerHeaderIcon == 0? 'open' : '' }}" bindtap="clickInnerHeaderIcon" >
+      <text></text><text></text><text></text>
+    </view>
+  </view>
+
+  <!--菜单展开项-->
+  <view class="inner-nav">
+      <a href="#">第一页</a>
+      <a href="#">第二页</a>
+      <a href="#">第三页</a>
+  </view>
+</view>
