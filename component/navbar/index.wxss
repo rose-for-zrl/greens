@@ -39,7 +39,7 @@
 }
 .inner-header-icon{  
   width: 40rpx;  
-  height: 25rpx;  
+  height: 20rpx;  
   /* line-height: 40rpx; */
   /* margin: 10px 10px;   */
   position: relative;  
@@ -52,7 +52,7 @@
   border-radius: 1px;  
   transition: .3s cubic-bezier(.8, .5, .2, 1.4);  
   width:100%;  
-  height: 4px;  
+  height: 2px;  
   transition-duration: 500ms
 }
 .inner-header-icon text:nth-child(1){
