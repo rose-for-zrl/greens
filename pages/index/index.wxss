@@ -34,7 +34,7 @@ page{
   color: beige;
   text-align: center; /** 水平居中 */
   line-height: 120rpx; /** 垂直居中 同height */
-  border-top: red 2rpx solid ;
+  border-top: rgb(12, 240, 240) 2rpx solid ;
   animation: fade 0.5s ease;
 }
 @keyframes fade {
@@ -42,7 +42,7 @@ page{
     border-top: gray 1rpx solid ;
   }
   100% {
-    border-top: red 2rpx solid ;
+    border-top: rgb(12, 240, 240) 2rpx solid ;
   }
 }
 /* .container .bar {
