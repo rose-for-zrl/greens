@@ -10,6 +10,7 @@ Page({
         nvabarData: {
             showCapsule: 1, //是否显示左上角图标   1表示显示    0表示不显示
             title: '我的主页', //导航栏 中间的标题
+            backgroundColor: 'rgba(255,255,255,0.6)'
           },
         //业务数据
         title:"老邹家的蔬菜", //当前页面名称
@@ -91,8 +92,6 @@ Page({
         wx.setNavigationBarTitle({
             title: this.data.title
           });
-        console.info(wx.getSystemInfoSync().windowHeight);
-        console.info(wx.getSystemInfoSync().windowWidth);
         this.getIndexData();
     },
     onReady: function () {

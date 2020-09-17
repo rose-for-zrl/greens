@@ -1,5 +1,5 @@
 <!--component/navbar/index.wxml-->
-<view class='nav-wrap' style='height: {{deviceHeight*2 }}px;'>
+<view class='nav-wrap' style='height: {{deviceHeight*2 }}px; background: {{ navbarData.backgroundColor }};'>
   <view class='nav-title' style='line-height: {{deviceHeight*2}}px;'>{{navbarData.title}}</view>
 
   <view class='nav-capsule' wx:if='{{navbarData.showCapsule}}'>
@@ -7,11 +7,13 @@
       <text></text><text></text><text></text>
     </view>
   </view>
-
   <!--菜单展开项-->
-  <view class="inner-nav">
-      <a href="#">第一页</a>
-      <a href="#">第二页</a>
-      <a href="#">第三页</a>
-  </view>
+  <div class="box  {{ clickInnerHeaderIcon == 0? 'box-show' : '' }}" style='height: {{ clickInnerHeaderIcon == 0 ? menuHeight: 0 }}px;'>
+        <div class="box-line box-line1 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">12321</div>
+        <div class="box-line box-line2 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">234</div>
+        <div class="box-line box-line3 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">344353</div>
+        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
+        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
+        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
+      </div>
 </view>
