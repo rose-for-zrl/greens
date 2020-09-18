@@ -8,12 +8,35 @@
     </view>
   </view>
   <!--菜单展开项-->
-  <div class="box  {{ clickInnerHeaderIcon == 0? 'box-show' : '' }}" style='height: {{ clickInnerHeaderIcon == 0 ? menuHeight: 0 }}px;'>
-        <div class="box-line box-line1 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">12321</div>
-        <div class="box-line box-line2 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">234</div>
-        <div class="box-line box-line3 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">344353</div>
-        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
-        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
-        <div class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">45331</div>
-      </div>
+  <view class="box  {{ clickInnerHeaderIcon == 0? 'box-show' : '' }}" style='height: {{ clickInnerHeaderIcon == 0 ? menuHeight: 0 }}px;'>
+    <view class="box-line box-line1 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">
+      <view class="search"> 
+        <view class="df search_arr"> 
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class=""  placeholder="输入关键字查询" value="{{searchValue}}"/>
+        </view>
+      </view>
+    </view>
+    <view class="box-line box-line1 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">
+      <a class="box-line-link" href="/pages/index/index" title="Home">
+        <span class="box-line-link-title">首页</span>
+      </a>
+    </view>
+    <view class="box-line box-line2 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">
+      <a class="box-line-link" href="/pages/logs/logs" title="Home">
+        <span class="box-line-link-title">产品</span>
+      </a>
+    </view> 
+    <view class="box-line box-line3 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">
+      <a class="box-line-link" href="/pages/logs/logs" title="Home">
+        <span class="box-line-link-title">联系</span>
+      </a>
+    </view> 
+    <view class="box-line box-line4 {{ clickInnerHeaderIcon == 0? 'box-line-show' : '' }}">
+      <a class="box-line-link" href="/pages/logs/logs" title="Home">
+        <span class="box-line-link-title">其他</span>
+      </a>
+    </view> 
+  </view>
+
 </view>

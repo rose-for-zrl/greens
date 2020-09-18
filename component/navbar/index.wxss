@@ -90,29 +90,91 @@
 }
 /** 菜单下拉 */
 .box {
-  display: flex;
+  display: block;
   width: 100%;
   position: absolute;
   top: 101%;
   left: 0;
-  height: 0px;
   overflow: hidden;
   background: rgba(255,255,255,0.85);
-  display: grid;
-  grid-gap: 20px;
-  transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 0;
   color: #333;
 }
+
 .box-line {
-  width: 100%;
+  padding: 0;
+  margin: 0;
 }
+.box-line:not(:last-child) {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1rpx solid #aaa;
+}
+
+.box-line-link {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  color: #2c2c2c;
+}
+.box-line-link-title {
+  font-size: 36rpx;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
 .box-show {
-  height: 10px;
   padding: 20px;
   transition-duration: 1s;
 }
 .box-line-show {
   opacity: 1;
-  transition-duration:1s;
+  transition-duration: 3s; 
 }
+/** 菜单搜索框 */
+.search{  
+  width: 80%;  
+}  
+.search_arr {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.bc_text {  
+  line-height: 68rpx;  
+  height: 68rpx;  
+  margin-top: 34rpx;  
+}  
+  
+.sousuo {  
+  margin-left: 15rpx;  
+  width: 15%;  
+  line-height: 150%;  
+  text-align: center;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+}  
+.page_row{  
+  display: flex;  
+  flex-direction: row  
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
